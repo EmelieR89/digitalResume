@@ -48,8 +48,8 @@ li {
 main {
     grid-area: main;
     display: flex;
-    justify-content: space-around;
     margin-top: 3rem;
+    justify-content: space-around;
 }
 
 .greetingPhrase {
@@ -61,8 +61,22 @@ main {
     color: gray;
 }
 
+i {
+    margin-right: 2rem;
+}
+
 img {
     height: 30rem;
     width: 24rem;
     border-radius: 50%;
+    display: flex;
+    /* border: solid 2px rgb(0, 176, 176); */
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    header > .fa-bars{
+        display: none ;
+    }
 }

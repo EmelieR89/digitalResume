@@ -1,0 +1,48 @@
+@media screen and (max-width: 1024px) {
+    nav {
+        display: none ;
+    }
+
+    .fa-bars {
+        font-size: 200%;
+    }
+    
+    .greetingPhrase {
+        font-size: 1rem;
+    }
+
+    img {
+        height:20rem;
+        width: 15rem;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: none ;
+    }
+
+    .fa-bars {
+        font-size: 200%;
+    }
+    
+    .greetingPhrase {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    img {
+        height:20rem;
+        width: 15rem;
+        
+    }
+
+    main {
+        display: block;
+    }
+
+
+
+}
