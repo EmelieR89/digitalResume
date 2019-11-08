@@ -1,0 +1,38 @@
+@media screen and (max-width: 375px) {
+    nav {
+        display: none ;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .fa-bars {
+        font-size: 150%;
+    }
+    
+    .greetingPhrase p {
+        font-size: 0.9rem;
+        margin: 0 1rem;
+        
+    }
+
+    img {
+        height:18rem;
+        width: 13rem;
+        margin-top: 2rem;
+        
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top:1.5rem;
+
+        
+    }
+
+
+
+}
