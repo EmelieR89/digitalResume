@@ -7,7 +7,7 @@ function projectToHTML() {
     let place = document.querySelector(".placeForCvData")
     let p = document.createElement("p")
 
-    p.innerHTML = cvData.myEmployments.lendahlsSkolan.info
+    p.innerHTML = cvData.myPortfolio.textGame.info
     place.append(p)
 }
 
@@ -64,7 +64,21 @@ const cvData = {
 
     },
 
-    portfolio
+    myPortfolio: {
+        textGame: new educationAndWorkItem
+            ("Get out!", "Ett textbaserat spel som jag gjorde som ett projekt i skolan. Demo: https://emelier89.github.io/TextGame/"),
+
+        stadsnäraLantgård: new educationAndWorkItem
+            ("Stadsnära Lantgård", "En webbsida som jag och en kurskamrat gjorde som ett projekt i skolan. Demo: https://emelier89.github.io/homepageLantg-rden/"),
+    },
+
+    myContactInfo: {
+        myEmail: new educationAndWorkItem
+            ("Email: ", "rosenlowemelie@gmail.com")
+
+    }
+
+
 }
 
 function educationAndWorkItem(titel, info, descriptionItems) {
