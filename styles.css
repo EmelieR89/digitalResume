@@ -26,7 +26,7 @@ header {
 
 h2 {
     font-size: 2rem;
-    margin-left: 2rem;
+    margin-left: 3rem;
     color: rgb(0, 176, 176);
     font-weight: 300;
 
@@ -51,7 +51,7 @@ main {
     justify-content: space-around;
 }
 
-.greetingPhrase {
+.placeForCvData {
     text-align: center;
     font-size: 1.2rem;
     font-family: sans-serif;
