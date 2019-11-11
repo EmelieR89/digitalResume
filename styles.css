@@ -1,5 +1,11 @@
 * {
     margin: 0;
+    padding: 0;
+}
+
+body {
+    padding:0;
+    margin:0;
 }
 
 .gridContainer {
@@ -79,4 +85,10 @@ img {
     header > .fa-bars{
         display: none ;
     }
+
+    header nav {
+        display: flex !important;
+    }
+
+
 }

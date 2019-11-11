@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     projectToHTML()
 
+
 })
 function projectToHTML() {
     let place = document.querySelector(".placeForCvData")
@@ -10,6 +11,11 @@ function projectToHTML() {
     p.innerHTML = cvData.myPortfolio.textGame.info
     place.append(p)
 }
+
+
+$(".fa-bars").click(function () {
+    $("nav").slideToggle(1000)
+})
 
 
 const cvData = {
