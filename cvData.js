@@ -1,94 +1,6 @@
-// import cvData from "./cvData.js"
-
-$(document).ready(function () {
-    renderGreetingPhrase()
-    // projectToHTML()
 
 
-})
-
-/**
- * 
- * @param {*} newElements 
- */
-function projectToHTML(newElements) {
-    const renderTarget = document.querySelector(".placeForCvData")
-    $(".placeForCvData").empty()
-    renderTarget.append(newElements)
-}
-
-
-/**
- * 
- */
-function renderGreetingPhrase() {
-    let p = document.createElement("p")
-    p.innerHTML = cvData.greetingPhrase.phrase
-    projectToHTML(p);
-}
-
-$(".aboutMe").click(function () {
-    let p = document.createElement("p")
-    p.innerHTML = cvData.myEmployments.lendahlsSkolan.info
-    projectToHTML(p);
-})
-
-$(".myEducations").click(function () {
-    // for (let i=0; i < cvData.myEducations.schools.length)
-    let parentDivEducations = document.createElement("div")
-
-    for (let education of cvData.myEducations) {
-        let div = document.createElement("div")
-        let h4 = document.createElement("h4")
-        let p = document.createElement("p")
-        h4.innerHTML = education.titel
-        p.innerHTML = education.info
-        div.appendChild(h4)
-        div.appendChild(p)
-        parentDivEducations.appendChild(div)
-    }
-    projectToHTML(parentDivEducations)
-
-
-    // let lärarutbDiv = document.createElement("div")
-    // let lärarh4 = document.createElement("h4")
-    // let lärarp = document.createElement("p")
-    // lärarh4.innerHTML = cvData.myEducations.lärarprogrammet.titel
-    // lärarp.innerHTML = cvData.myEducations.lärarprogrammet.info
-    // lärarutbDiv.appendChild(lärarh4)
-    // lärarutbDiv.appendChild(lärarp)
-
-    // let frontEndDiv = document.createElement("div")
-    // let fronth4 = document.createElement("h4")
-    // let frontp = document.createElement("p")
-    // fronth4.innerHTML = cvData.myEducations.frontEndDeveloper.titel
-    // frontp.innerHTML = cvData.myEducations.frontEndDeveloper.info
-    // frontEndDiv.appendChild(fronth4)
-    // frontEndDiv.appendChild(frontp)
-
-    // parentDivEducations.appendChild div)
-    // parentDivEducations.appendChild(lärarutbDiv)
-    // parentDivEducations.appendChild(frontEndDiv)
-    // projectToHTML(parentDivEducations)
-
-
-
-
-
-})
-
-
-
-
-
-$(".fa-bars").click(function () {
-    $("nav").slideToggle(1000)
-})
-
-
-
-
-const cvData = {
+export default cvData = {
     greetingPhrase: {
         phrase:
             "Hej och välkomna till mitt CV. Här kan ni läsa om vem jag är, "
@@ -116,6 +28,7 @@ const cvData = {
                     "Grafiska verktyg  för gränssnittsdesign, 15 p", "UX och Usability, 15 p",
                     "Arbetsmetodik för utvecklare, 15 p", "Att arbeta i project med agila metoder, 15 p",
                     "LIA 1, 50 p", "LIA 2, 80 p", "Examensarbete, 30 p"])
+
     },
 
     myEmployments: {
@@ -156,12 +69,6 @@ const cvData = {
 
 }
 
-/**
- * 
- * @param {*} titel 
- * @param {*} info 
- * @param {*} descriptionItems 
- */
 function educationAndWorkItem(titel, info, descriptionItems) {
     this.titel = titel;
     this.info = info;
