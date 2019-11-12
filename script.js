@@ -23,40 +23,108 @@ function renderGreetingPhrase() {
     projectToHTML(p);
 }
 
+
+//När man trycker på de olika "knapparna" i menyn så sätts en funktion igång som skapar element och skickar in den info som ska finnas under varje. 
 $(".infoAboutMe").click(function () {
     let p = document.createElement("p")
     p.innerHTML = cvData.myInfo.info
     projectToHTML(p);
 })
 
-$(".infoMyPortfolio").click(function () {
-    let p = document.createElement("p")
-    p.innerHTML = cvData.myPortfolio.textGame.titel
-    projectToHTML(p);
-})
-
-$(".contact").click(function () {
-    let p = document.createElement("p")
-    p.innerHTML = cvData.myContactInfo.myEmail.info
-    projectToHTML(p);
-})
-
 $(".infoMyEducations").click(function () {
-    // for (let i=0; i < cvData.myEducations.schools.length)
     let parentDivEducations = document.createElement("div")
 
     for (let education of cvData.myEducations) {
         let div = document.createElement("div")
         let h4 = document.createElement("h4")
         let p = document.createElement("p")
+        let ul = document.createElement("ul")
+
+        //Om det finns descriptionItems, lägg dem i lista. 
+        if (education.descriptionItems) {
+            for (let item of education.descriptionItems) {
+                let li = document.createElement("li")
+                li.innerHTML = item
+                ul.appendChild(li)
+            }
+        }
+
         h4.innerHTML = education.titel
         p.innerHTML = education.info
+
         div.appendChild(h4)
         div.appendChild(p)
+        div.appendChild(ul)
+
         parentDivEducations.appendChild(div)
     }
     projectToHTML(parentDivEducations)
+})
 
+$(".infoMyEmployments").click(function () {
+    let parentDivEmployments = document.createElement("div")
+
+    for (let employment of cvData.myEmployments) {
+        let div = document.createElement("div")
+        let h4 = document.createElement("h4")
+        let p = document.createElement("p")
+
+
+        h4.innerHTML = employment.titel
+        p.innerHTML = employment.info
+
+        div.appendChild(h4)
+        div.appendChild(p)
+
+        parentDivEmployments.appendChild(div)
+    }
+
+    projectToHTML(parentDivEmployments)
+
+})
+
+$(".infoMyPortfolio").click(function () {
+    let parentDivPortfolio = document.createElement("div")
+
+    for (let item of cvData.myPortfolio) {
+        let div = document.createElement("div")
+        let h4 = document.createElement("h4")
+        let p = document.createElement("p")
+
+
+        //skapar demo-länk
+        let a = document.createElement("a")
+        let demo = document.createTextNode("Demo");
+        a.appendChild(demo);
+        a.title = "Demo";
+        a.href = item.descriptionItems
+
+        h4.innerHTML = item.titel
+        p.innerHTML = item.info
+
+
+        div.appendChild(h4)
+        div.appendChild(p)
+        div.appendChild(a)
+
+        parentDivPortfolio.appendChild(div)
+    }
+
+    projectToHTML(parentDivPortfolio);
+})
+
+$(".contact").click(function () {
+    let parentDivContact = document.createElement("div")
+    let h2 = document.createElement("h2")
+    let p = document.createElement("p")
+
+    h2.innerHTML = cvData.myContactInfo.myEmail.titel
+    p.innerHTML = cvData.myContactInfo.myEmail.info
+
+    parentDivContact.appendChild(h2)
+    parentDivContact.appendChild(p)
+
+    projectToHTML(parentDivContact)
 
 })
 
@@ -78,25 +146,4 @@ function educationAndWorkItem(titel, info, descriptionItems) {
     this.info = info;
     this.descriptionItems = descriptionItems;
 }
-
-    // let lärarutbDiv = document.createElement("div")
-    // let lärarh4 = document.createElement("h4")
-    // let lärarp = document.createElement("p")
-    // lärarh4.innerHTML = cvData.myEducations.lärarprogrammet.titel
-    // lärarp.innerHTML = cvData.myEducations.lärarprogrammet.info
-    // lärarutbDiv.appendChild(lärarh4)
-    // lärarutbDiv.appendChild(lärarp)
-
-    // let frontEndDiv = document.createElement("div")
-    // let fronth4 = document.createElement("h4")
-    // let frontp = document.createElement("p")
-    // fronth4.innerHTML = cvData.myEducations.frontEndDeveloper.titel
-    // frontp.innerHTML = cvData.myEducations.frontEndDeveloper.info
-    // frontEndDiv.appendChild(fronth4)
-    // frontEndDiv.appendChild(frontp)
-
-    // parentDivEducations.appendChild div)
-    // parentDivEducations.appendChild(lärarutbDiv)
-    // parentDivEducations.appendChild(frontEndDiv)
-    // projectToHTML(parentDivEducations)
 
