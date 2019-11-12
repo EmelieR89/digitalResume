@@ -30,7 +30,7 @@ header {
 
 }
 
-h2 {
+header h2 {
     font-size: 2rem;
     margin-left: 3rem;
     color: rgb(0, 176, 176);
@@ -38,16 +38,25 @@ h2 {
 
 }
 
-ul {
+header nav ul {
     display: flex;
     margin-right: 2rem;
 }
 
-li {
+header nav ul li {
     list-style-type: none;
     margin: 0 1rem;
     font-size: 1.2rem;
     
+}
+
+header nav ul li:hover {
+    color: rgb(0, 176, 176);
+    cursor: context-menu;
+}
+
+header i {
+    margin-right: 2rem;
 }
 
 main {
@@ -68,11 +77,8 @@ main {
     width: 30rem;
 }
 
-i {
-    margin-right: 2rem;
-}
 
-img {
+main img {
     height: 30rem;
     width: 24rem;
     border-radius: 50%;

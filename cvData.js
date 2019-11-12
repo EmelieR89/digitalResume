@@ -1,13 +1,33 @@
 
 
-export default cvData = {
+const cvData = {
     greetingPhrase: {
         phrase:
             "Hej och välkomna till mitt CV. Här kan ni läsa om vem jag är, "
             + "vad jag gjorde innan jag blev Front End utvecklare och även titta "
             + "på min portfolio som innehåller olika projekt som jag skapat. "
             + "Tveka inte att höra av er om det är något ni funderar kring, "
-            + "all kontaktinformation ligger under fliken Kontakt."
+            + "all kontaktinformation ligger under fliken"
+            + "<strong>" + " Kontakt." + "<strong>"
+    },
+
+    myInfo: {
+        info:
+            "Jag är på god väg att bli Front End Developer. Innan jag kom in på denna "
+            + "bana så utbildade jag mig till lärare och arbetade under flera år i utbildningsväsendet. "
+            + "Någonstans på vägen insåg jag att det inte var detta jag ville göra, utan började "
+            + "fundera på att skola om mig. Jag har alltid haft ett teknikintresse och en förkärlek "
+            + "till språk och matematik. I min umgängeskrets är det flera som arbetar inom"
+            + "system- och webbutveckling som rekommenderade mig att testa programmering, "
+            + "och jag fastnade för det på en gång! Blandningen av olika språkliga syntaxer, "
+            + "problemlösning och matematik tilltalade mig oerhört! Och på den vägen är det. "
+            + "<br><br>"
+            + "Jag bor i Alingsås med min sambo. På min lediga tid gillar jag att vara fysiskt aktiv, "
+            + "vare sig det är på gymmet eller ute i naturen. Jag gillar att vandra, åka skridskor och cykla."
+            + "Dessutom har jag stort intresse för djur och natur. Bland annat är jag volontär på en lantgård, "
+            + "som ligger utanför Lidköping, där jag vissa helger har ansvar för gården och dess djur. "
+            + "Jag har även ett musikintresse, och har tidigare spelat trummor i diverse band. "
+
     },
 
     myEducations: {
