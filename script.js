@@ -20,7 +20,28 @@ function projectToHTML(newElements) {
 function renderGreetingPhrase() {
     let p = document.createElement("p")
     p.innerHTML = cvData.greetingPhrase.phrase
+    p.className = "greetingPhrase"
     projectToHTML(p);
+}
+
+$(".rootMenu").click(function () {
+    renderGreetingPhrase()
+    otherPicture(event)
+
+
+})
+
+
+function otherPicture(clickEvent) {
+    if (clickEvent.target.className === "infoAboutMe") {
+        let newPhoto = document.querySelector(".photo")
+        newPhoto.src = "./pictures/skridskorHornborgarsjön.jpg"
+        // newPhoto.style.transform = "rotate(90deg)"
+        // newPhoto.style.width = "30rem"
+    } else {
+        document.querySelector(".photo").src = "./pictures/jag2.jpg"
+
+    }
 }
 
 
@@ -28,7 +49,11 @@ function renderGreetingPhrase() {
 $(".infoAboutMe").click(function () {
     let p = document.createElement("p")
     p.innerHTML = cvData.myInfo.info
-    projectToHTML(p);
+    p.className = "aboutMe"
+
+    otherPicture(event)
+
+    projectToHTML(p)
 })
 
 $(".infoMyEducations").click(function () {
@@ -52,12 +77,18 @@ $(".infoMyEducations").click(function () {
         h4.innerHTML = education.titel
         p.innerHTML = education.info
 
+        parentDivEducations.className = "parentDivEducations"
+        // h4.className = "educationTitles"
+        p.className = "educationInfo"
+        ul.className = "educationDescriptionItems"
+
         div.appendChild(h4)
         div.appendChild(p)
         div.appendChild(ul)
 
         parentDivEducations.appendChild(div)
     }
+    otherPicture(event)
     projectToHTML(parentDivEducations)
 })
 
@@ -73,11 +104,17 @@ $(".infoMyEmployments").click(function () {
         h4.innerHTML = employment.titel
         p.innerHTML = employment.info
 
+        parentDivEmployments.className = "parentDivEmployments"
+        h4.className = "employmentsTitel"
+        p.className = "employmentsInfo"
+
         div.appendChild(h4)
         div.appendChild(p)
 
         parentDivEmployments.appendChild(div)
     }
+
+    otherPicture(event)
 
     projectToHTML(parentDivEmployments)
 
@@ -99,6 +136,11 @@ $(".infoMyPortfolio").click(function () {
         a.title = "Demo";
         a.href = item.descriptionItems
 
+        h4.className = "portfolioTitel"
+        p.className = "portfolioInfo"
+        a.className = "portfolioLinks"
+
+
         h4.innerHTML = item.titel
         p.innerHTML = item.info
 
@@ -109,6 +151,8 @@ $(".infoMyPortfolio").click(function () {
 
         parentDivPortfolio.appendChild(div)
     }
+    otherPicture(event)
+
 
     projectToHTML(parentDivPortfolio);
 })
@@ -121,8 +165,13 @@ $(".contact").click(function () {
     h2.innerHTML = cvData.myContactInfo.myEmail.titel
     p.innerHTML = cvData.myContactInfo.myEmail.info
 
+    p.className = "contactInfo"
+
     parentDivContact.appendChild(h2)
     parentDivContact.appendChild(p)
+
+    otherPicture(event)
+
 
     projectToHTML(parentDivContact)
 

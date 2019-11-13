@@ -38,6 +38,10 @@ header h2 {
 
 }
 
+header h2:hover {
+    cursor: pointer;
+}
+
 header nav ul {
     display: flex;
     margin-right: 2rem;
@@ -52,7 +56,7 @@ header nav ul li {
 
 header nav ul li:hover {
     color: rgb(0, 176, 176);
-    cursor: context-menu;
+    cursor: pointer;
 }
 
 header i {
@@ -67,14 +71,13 @@ main {
 }
 
 .placeForCvData {
-    text-align: center;
     font-size: 1.2rem;
     font-family: sans-serif;
     display: flex;
     align-items: center;
     color: gray;
-    justify-content: center;
-    width: 30rem;
+    /* justify-content: center; */
+    width: 33rem;
 }
 
 
@@ -84,6 +87,52 @@ main img {
     border-radius: 50%;
     display: flex;
     /* border: solid 2px rgb(0, 176, 176); */
+}
+
+/*Styling för välkomsttext*/ 
+.greetingPhrase {
+    text-align: center;
+    
+}
+
+/*Styling för "Utbildningar"*/
+.parentDivEducations {
+    margin: 0 1rem;
+    font-size: 1.1rem;
+}
+
+.educationInfo {
+    margin-top: 0.5rem;
+}
+
+.educationDescriptionItems {
+    margin: 0.5rem 0 1.5rem 0;
+    list-style-type: circle;
+
+}
+
+/*Styling för "Arbetserfarenhet"*/
+.parentDivEmployments {
+    margin: 0 1rem;
+    width: 40rem;
+}
+
+.employmentsInfo {
+    margin-bottom: 1rem;
+}
+
+/*Styling för "Portfolio"*/
+.portfolioTitel {
+    margin-top: 1.5rem;
+}
+
+.portfolioLinks {
+    text-decoration: none;
+    color: rgb(0, 176, 176);
+}
+
+.contactInfo {
+    color: rgb(0, 176, 176);
 }
 
 
@@ -97,4 +146,8 @@ main img {
     }
 
 
+}
+
+.blaha {
+    color: red;
 }
