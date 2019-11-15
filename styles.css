@@ -14,10 +14,9 @@ body {
     grid-template-rows: 1 fr 1 fr;
     grid-template-areas: 
     "header header"
-    "main main"
-    
-    ;
+    "main main";
 }
+
 
 header {
     grid-area: header;
@@ -27,7 +26,6 @@ header {
     height: 5rem;
     align-items: flex-end;
     border-bottom: solid 0.1rem lightgrey;
-
 }
 
 header h2 {
@@ -35,7 +33,6 @@ header h2 {
     margin-left: 3rem;
     color: rgb(0, 176, 176);
     font-weight: 300;
-
 }
 
 header h2:hover {
@@ -50,8 +47,7 @@ header nav ul {
 header nav ul li {
     list-style-type: none;
     margin: 0 1rem;
-    font-size: 1.2rem;
-    
+    font-size: 1.2rem;    
 }
 
 header nav ul li:hover {
@@ -70,14 +66,15 @@ main {
     justify-content: space-around;
 }
 
+/* Den div där all data visas*/
 .placeForCvData {
     font-size: 1.2rem;
     font-family: sans-serif;
     display: flex;
     align-items: center;
     color: gray;
-    /* justify-content: center; */
-    width: 33rem;
+    max-width: 33rem;
+    
 }
 
 
@@ -86,13 +83,11 @@ main img {
     width: 24rem;
     border-radius: 50%;
     display: flex;
-    /* border: solid 2px rgb(0, 176, 176); */
 }
 
 /*Styling för välkomsttext*/ 
 .greetingPhrase {
     text-align: center;
-    
 }
 
 /*Styling för "Utbildningar"*/
@@ -114,7 +109,7 @@ main img {
 /*Styling för "Arbetserfarenhet"*/
 .parentDivEmployments {
     margin: 0 1rem;
-    width: 40rem;
+    max-width: 40rem;
 }
 
 .employmentsInfo {
@@ -131,6 +126,7 @@ main img {
     color: rgb(0, 176, 176);
 }
 
+/*Styling för "Kontakt*/
 .contactInfo {
     color: rgb(0, 176, 176);
 }
@@ -145,9 +141,4 @@ main img {
         display: flex !important;
     }
 
-
-}
-
-.blaha {
-    color: red;
 }

@@ -1,5 +1,5 @@
 
-
+// All data till hemsidan
 const cvData = {
     greetingPhrase: {
         phrase:
@@ -85,10 +85,14 @@ const cvData = {
             ("Email: ", "rosenlowemelie@gmail.com")
 
     }
-
-
 }
 
+/**
+ * 
+ * @param {String} titel titel på objektet
+ * @param {String} info huvudsakliga infon om objektet
+ * @param {String} descriptionItems specifik info om objektet
+ */
 function educationAndWorkItem(titel, info, descriptionItems = null) {
     this.titel = titel;
     this.info = info;

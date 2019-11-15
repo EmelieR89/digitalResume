@@ -1,4 +1,6 @@
 @media screen and (max-width: 1024px) {
+    
+    /*Menyn i tablet och mobile*/ 
     header nav {
         position: absolute;
         width:100%;
@@ -35,7 +37,6 @@
     .placeForCvData {
         font-size: 1rem;
         margin: 0 2rem;
-
     }
 
     main img {
@@ -68,7 +69,5 @@
         align-items: center;
     
     }
-
-
 
 }

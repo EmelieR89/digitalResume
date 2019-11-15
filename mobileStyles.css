@@ -3,6 +3,7 @@
 
     header h2 {
         font-size: 1.3rem;
+        margin-left: 1.5rem;
     }
 
     .fa-bars {
@@ -11,8 +12,8 @@
     
     .placeForCvData {
         font-size: 0.9rem;
-        margin: 0 1rem;
-        }
+        margin: 1rem;
+    }
 
 
     main {
@@ -27,7 +28,5 @@
         width: 13rem;
         margin-top: 2rem;
     }
-
-
 
 }
