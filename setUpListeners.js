@@ -14,7 +14,7 @@ function setUpListeners() {
     $(".infoAboutMe").click(function () {
         let p = document.createElement("p")
         p.innerHTML = cvData.myInfo.info
-        p.className = "aboutMe"
+        p.className = "aboutMe transition"
 
         otherPicture(event)
 
@@ -42,7 +42,7 @@ function setUpListeners() {
             h4.innerHTML = education.titel
             p.innerHTML = education.info
 
-            parentDivEducations.className = "parentDivEducations"
+            parentDivEducations.className = "parentDivEducations transition"
             p.className = "educationInfo"
             ul.className = "educationDescriptionItems"
 
@@ -68,7 +68,7 @@ function setUpListeners() {
             h4.innerHTML = employment.titel
             p.innerHTML = employment.info
 
-            parentDivEmployments.className = "parentDivEmployments"
+            parentDivEmployments.className = "parentDivEmployments transition"
             h4.className = "employmentsTitel"
             p.className = "employmentsInfo"
 
@@ -103,6 +103,7 @@ function setUpListeners() {
             h4.className = "portfolioTitel"
             p.className = "portfolioInfo"
             a.className = "portfolioLinks"
+            parentDivPortfolio.className = "transition"
 
 
             h4.innerHTML = item.titel
@@ -130,6 +131,7 @@ function setUpListeners() {
         p.innerHTML = cvData.myContactInfo.myEmail.info
 
         p.className = "contactInfo"
+        parentDivContact.className = "transition"
 
         parentDivContact.appendChild(h2)
         parentDivContact.appendChild(p)

@@ -44,10 +44,12 @@ function otherPicture(clickEvent) {
 
 //ser till att baren togglar
 $(".fa-bars").click(function () {
-    $("nav").slideToggle(1000)
+    if ($(window).width() < 1024)
+        $("nav").slideToggle(1000)
 })
 
 $("li").click(function () {
-    $("nav").slideUp(1000)
+    if ($(window).width() < 1024)
+        $("nav").slideUp(1000)
 })
 

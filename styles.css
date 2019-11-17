@@ -94,6 +94,7 @@ main img {
 .parentDivEducations {
     margin: 0 1rem;
     font-size: 1.1rem;
+
 }
 
 .educationInfo {
@@ -139,6 +140,21 @@ main img {
 
     header nav {
         display: flex !important;
+    }
+
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+    
+        to{
+            opacity: 1;
+        }
+    }
+    
+    /*Ger fade in effekt på alla sidor*/
+    .transition {
+        animation: 1s fadeIn;
     }
 
 }
