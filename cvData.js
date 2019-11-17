@@ -1,5 +1,6 @@
-
-// All data till hemsidan
+/**
+ * All data som ska renderas till hemsidan.
+ */
 const cvData = {
     greetingPhrase: {
         phrase:

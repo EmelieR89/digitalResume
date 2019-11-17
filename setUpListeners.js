@@ -1,3 +1,7 @@
+
+/**
+ * Beroende på användaren menyval genereras olika HTML-element med relevant data.
+ */
 function setUpListeners() {
 
     //När användaren trycker på namnet kommer de till "hälsningsfras"
@@ -7,7 +11,6 @@ function setUpListeners() {
     })
 
 
-    //När man trycker på de olika "knapparna" i menyn så sätts en funktion igång som skapar element och skickar in den info som ska finnas under varje. 
     $(".infoAboutMe").click(function () {
         let p = document.createElement("p")
         p.innerHTML = cvData.myInfo.info

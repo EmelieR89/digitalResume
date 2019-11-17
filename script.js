@@ -1,10 +1,6 @@
 $(document).ready(function () {
     renderGreetingPhrase()
     setUpListeners()
-
-    $(".förstaSidan").click(function () {
-        $("förstaSidan").hide()
-    })
 })
 
 
@@ -51,4 +47,7 @@ $(".fa-bars").click(function () {
     $("nav").slideToggle(1000)
 })
 
+$("li").click(function () {
+    $("nav").slideUp(1000)
+})
 
