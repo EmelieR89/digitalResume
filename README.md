@@ -6,3 +6,4 @@ previous work experiences. The site had to be responsive and interactiv. It was 
 https://github.com/EmelieR89/digitalResume
 
 
+https://emelier89.github.io/digitalResume/
